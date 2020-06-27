@@ -8,6 +8,7 @@
     <title>Музей воздухоплавания.</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="shortcut icon" href="../assets/css/paper_plane_PNG7.png" type="image/x-icon">
 
 </head>
 
