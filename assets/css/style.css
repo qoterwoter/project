@@ -292,7 +292,17 @@ p {
   p {
     font-size: 21px !important;
   }
+  .aboutUs {
+    margin: 0 !important;
+  }
+  .aboutUs .aboutUs__title {
+    font-size: 30px;
+  }
+  .aboutUs .aboutUs__description {
+    padding: 10px;
+  }
   .planes__card {
+    border-top: 10px solid black;
     padding: 3vh;
   }
   .planes__card .planes__title {
@@ -337,6 +347,15 @@ p {
   }
 }
 
+@media (max-width: 470px) {
+  .news__section .news__title {
+    font-size: 20px !important;
+  }
+  .news__section .news__image {
+    width: 80%;
+  }
+}
+
 @media print {
   header {
     height: 30px;
@@ -363,6 +382,14 @@ p {
   }
   footer {
     display: none;
+  }
+  .planes__section .planes__card {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  .planes__section .planes__card .planes__image {
+    width: 170px;
   }
 }
 /*# sourceMappingURL=style.css.map */

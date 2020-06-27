@@ -218,8 +218,16 @@ p
 
   p
     font-size: 21px !important
+  .aboutUs
+    .aboutUs__title
+      font-size: 30px
+    .aboutUs__description
+      padding: 10px
+    .aboutUs__image
+    margin: 0 !important
 
   .planes__card
+    border-top: 10px solid black
     .planes__title
       font-size: 30px
 
@@ -260,7 +268,12 @@ p
 
     .header__menu .header__list .header__item a
       font-size: 25px
-
+@media (max-width: 470px) 
+  .news__section
+    .news__title
+      font-size: 20px !important
+    .news__image
+      width: 80%
 @media print
     header
         height: 30px
@@ -281,12 +294,10 @@ p
                 width: 170px
     footer 
         display: none
-
     .planes__section
-        margin:0
-        padding:0
         .planes__card
-            margin:0
-            padding:0
-            .planes__card .planes__image
+            border: 0
+            margin: 0
+            padding: 0
+            .planes__image
                 width: 170px
