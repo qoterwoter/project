@@ -24,15 +24,15 @@
             $date_month =  $_monthsList[$date_month];
             $date_full = date_format($date, 'd '.$date_month.' Y');
 
-            echo '<article class="plane_card">';
-            echo '<h3>'.$data[$i][0].'. '.$data[$i][1].' - '.$date_full.'</h3>';
-            echo '<img src="'.$data[$i][5].'" alt="'.$data[$i][6].'" title="'.$data[$i][6].'">';
-            echo '<p>'.$data[$i][3].'</p>';
+            echo '<article class="planes__card">';
+            echo '<h3 class="planes__title animate__animated animate__fadeInRight">'.$data[$i][0].'. '.$data[$i][1].' - '.$date_full.'</h3>';
+            echo '<img class="planes__image animate__animated animate__fadeInUpBig" src="'.$data[$i][5].'" alt="'.$data[$i][6].'" title="'.$data[$i][6].'">';
+            echo '<p class="planes__paragraph animate__animated animate__fadeInBottomLeft">'.$data[$i][3].'</p>';
             echo '</article>';
         }
     }
-    echo '<section>
-    <h2>Наши самолёты</h2>';
+    echo '<section class="planes__section">
+            <h2>Наши самолёты</h2>';
     planesOut($dbconnection);
     echo '</section>';
 

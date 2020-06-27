@@ -22,11 +22,11 @@
             $date_month =  $_monthsList[$date_month];
             $date_full = date_format($date, 'd '.$date_month.' Y');
 
-            echo '<article class="news_card">';
-            echo '<h3>'.$data[$i][1].'</h3>';
-            echo '<p class="news_date">'.$date_full.'</p>';
-            echo '<img src="'.$data[$i][5].'" alt="'.$data[$i][6].'" title="'.$data[$i][6].'">';
-            echo '<p>'.$data[$i][3].'</p>';
+            echo '<article class="news__card">';
+            echo '<h3 class="news__title animate__animated animate__rotateInDownLeft">'.$data[$i][1].'</h3>';
+            echo '<p class="news__date animate__animated animate__jackInTheBox ">'.$date_full.'</p>';
+            echo '<img class="news__image animate__animated animate__zoomInDown" src="'.$data[$i][5].'" alt="'.$data[$i][6].'" title="'.$data[$i][6].'">';
+            echo '<p class="news__description animate__animated animate__slideInUp">'.$data[$i][3].'</p>';
             echo '</article>';
 
         }
@@ -34,7 +34,7 @@
 
     echo '
     <h2>Новости</h2>
-    <section class="news_section">';
+    <section class="news__section">';
     newsOut();
     echo '</section>';
 

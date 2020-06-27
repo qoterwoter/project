@@ -21,7 +21,7 @@
         $result = mysqli_query($link, $sql_news);
         $data = mysqli_fetch_all($result);
 
-        echo '<h4 class="table_title">Данные в таблице <b>planes_news</b></h4>';
+        echo '<h4 class="table__title">Данные в таблице <b>planes_news</b></h4>';
         echo '<table>
         <tr>
             <th>Номер</th>
@@ -46,7 +46,7 @@
         $result = mysqli_query($link, $sql_news);
         $data = mysqli_fetch_all($result);
 
-        echo '<h4 class="table_title">Данные в таблице <b>planes</b></h4>';
+        echo '<h4 class="table__title">Данные в таблице <b>planes</b></h4>';
         echo '<table>
         <tr>
             <th>Номер</th>
@@ -71,7 +71,7 @@
         $result = mysqli_query($link, $sql_news);
         $data = mysqli_fetch_all($result);
 
-        echo '<h4 class="table_title">Данные в таблице <b>planes_links</b></h4>';
+        echo '<h4 class="table__title">Данные в таблице <b>planes_links</b></h4>';
         echo '<table>
         <tr>
             <th>Номер</th>
@@ -95,7 +95,7 @@
         $result = mysqli_query($link, $sql_news);
         $data = mysqli_fetch_all($result);
 
-        echo '<h4 class="table_title">Данные в таблице <b>planes_photos</b></h4>';
+        echo '<h4 class="table__title">Данные в таблице <b>planes_photos</b></h4>';
         echo '<table>
         <tr>
             <th>Номер (определяется по номеру поста)</th>
@@ -119,7 +119,7 @@
         $result = mysqli_query($link, $sql_news);
         $data = mysqli_fetch_all($result);
 
-        echo '<h4 class="table_title">Данные в таблице <b>planes_news_photos</b></h4>';
+        echo '<h4 class="table__title">Данные в таблице <b>planes_news_photos</b></h4>';
         echo '<table>
         <tr>
             <th>Номер (определяется по номеру поста)</th>

@@ -1,300 +1,368 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-    background: url(passazhirskii-samoliot-avialainer-vysota-poliot-nebo-oblaka.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  background: url("passazhirskii-samoliot-avialainer-vysota-poliot-nebo-oblaka.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-header h2 {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.486);
-    padding: 0 2px;
-    margin-bottom: 60vh;
+header .header__title {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.486);
+  padding: 0 2px;
+  margin-bottom: 60vh;
 }
 
-header nav {
-    margin-top: 10vh;
+header .header__menu {
+  margin-top: 10vh;
 }
 
-header nav ul li,
-footer ul li {
-    list-style-type: none;
+header .header__menu .header__list {
+  list-style-type: none;
 }
 
-header nav ul li a,
-footer ul li a {
-    color: rgb(153, 226, 255);
-    background-color: rgba(0, 0, 0, 0.486);
-    transition: .8s;
-    padding: 0 4px;
+footer .footer__list .footer__link {
+  list-style-type: none;
 }
 
-header nav ul li a:hover,
-footer ul li a:hover {
-    transition: .4s;
-    color: rgb(255, 196, 255);
+header .header__menu .header__list a, footer .footer__list .footer__link a {
+  color: #99e2ff;
+  background-color: rgba(0, 0, 0, 0.486);
+  -webkit-transition: .8s;
+  transition: .8s;
+  padding: 0 4px;
 }
 
-.plane_card {
-    border-top: 2px solid gray;
+header .header__menu .header__list a:hover, footer .footer__list .footer__link a:hover {
+  -webkit-transition: .4s;
+  transition: .4s;
+  color: #ffc4ff;
 }
 
-.plane_card p {
-    font-size: 21px;
-    margin-top: 10px;
+.planes__card {
+  border-top: 2px solid gray;
 }
 
-.plane_card img {
-    width: 330px;
-    margin-top: 10px;
-    border-radius: 4px;
+.planes__card .planes__paragraph {
+  font-size: 21px;
+  margin-top: 10px;
+}
+
+.planes__card .planes__image {
+  width: 330px;
+  margin-top: 10px;
+  border-radius: 4px;
 }
 
 section {
-    padding: 1vh 3vh;
-    background-color: rgb(230, 248, 255);
+  padding: 1vh 3vh;
+  background-color: #e6f8ff;
 }
 
-.plane_card {
-    padding: 2vh 9vh;
-    background-color: rgb(230, 248, 255);
+.planes__card {
+  padding: 2vh 9vh;
+  background-color: #e6f8ff;
 }
 
-.news_section {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    grid-gap: 4.4vh 1.8vh;
+.news__section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 2fr;
+      grid-template-columns: 2fr 2fr;
+  grid-gap: 4.4vh 1.8vh;
 }
 
-.news_card {
-    background-color: rgb(255, 255, 230);
-    padding: 30px;
-    width: 90%;
+.news__card {
+  background-color: #ffffe6;
+  padding: 30px;
+  width: 90%;
 }
 
-.news_card img {
-    width: 400px;
+.news__card .news__image {
+  width: 400px;
 }
 
-.news_card h3 {
-    font-size: 32px;
+.news__card .news__title {
+  font-size: 32px;
 }
 
-.news_card p {
-    font-size: 25px;
+.news__card .news__description {
+  font-size: 25px;
 }
 
-.news_card .news_date {
-    color: rgb(167, 167, 167);
-    font-size: 16px;
+.news__card .news__date {
+  color: #a7a7a7;
+  font-size: 16px;
 }
 
-.about_us p {
-    padding: 40px;
-    font-size: 32px;
+.aboutUs {
+  background-color: #e6f8ff;
 }
 
-.about_us {
-    background-color: rgb(230, 248, 255);
+.aboutUs .aboutUs__description {
+  padding: 40px;
+  font-size: 32px;
 }
 
-.about_us img {
-    float: left;
-    margin: 0 40px 10px 0;
-    border-radius: 4px;
+.aboutUs .aboutUs__image {
+  float: left;
+  margin: 0 40px 10px 0;
+  border-radius: 4px;
 }
 
 footer {
-    padding: 50px;
-    list-style-type: none;
-    background-color: black;
-    color: white;
+  padding: 50px;
+  list-style-type: none;
+  background-color: black;
+  color: white;
 }
 
-footer ul li a {
-    background-color: transparent;
-    text-decoration: none;
+footer .footer__list .footer__link a {
+  background-color: transparent;
+  text-decoration: none;
 }
 
-.table_title {
-    border-top: 2px solid black;
-    background-color: rgb(153, 226, 255);
+.table__title {
+  border-top: 2px solid black;
+  background-color: #99e2ff;
 }
 
 table {
-    width: 100%;
+  width: 100%;
 }
 
-input,
-select {
-    font-size: 24px;
-    border: 2px solid lightgray;
-    border-radius: 5px;
-    padding: 6px 10px;
-    margin: 10px;
-    transition: .2s;
-    background-color: rgb(239, 250, 255);
+input, select {
+  font-size: 24px;
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  padding: 6px 10px;
+  margin: 10px;
+  -webkit-transition: .2s;
+  transition: .2s;
+  background-color: #effaff;
 }
 
-input[type=text],
-input[type=number] {
-    width: 60%;
+input[type=text], input[type=number] {
+  width: 60%;
 }
 
 form {
-    border-top: 5px solid rgb(94, 236, 255);
-    padding-top: 10px;
-    margin-top: 10px;
+  border-top: 5px solid #5eecff;
+  padding-top: 10px;
+  margin-top: 10px;
 }
 
 form label {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-input:hover,
-select:hover {
-    box-shadow: 0 0 15px rgba(75, 75, 75, 0.486);
+input:hover, select:hover {
+  -webkit-box-shadow: 0 0 15px rgba(75, 75, 75, 0.486);
+          box-shadow: 0 0 15px rgba(75, 75, 75, 0.486);
 }
 
-input[type=submit]:hover,
-button:hover {
-    box-shadow: 0 0 15px rgb(160, 255, 180);
+input[type=submit]:hover, button:hover {
+  -webkit-box-shadow: 0 0 15px #a0ffb4;
+          box-shadow: 0 0 15px #a0ffb4;
 }
 
-input[type=submit],
-button {
-    font-size: 24px;
-    font-weight: 400;
-    padding: 5px 15px;
-    border: 2px solid lightgray;
-    border-radius: 40px;
-    background-color: white;
+input[type=submit], button {
+  font-size: 24px;
+  font-weight: 400;
+  padding: 5px 15px;
+  border: 2px solid lightgray;
+  border-radius: 40px;
+  background-color: white;
 }
 
 .addNewForm {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .logout {
-    display: inline-block;
-    font-size: 60px;
-    color: rgb(255, 174, 255);
-    background-color: rgb(75, 75, 75);
-    padding: 6px 20px;
-    border-radius: 20px;
-    margin: 25px 80px;
-    transition: .3s;
+  display: inline-block;
+  font-size: 60px;
+  color: #ffaeff;
+  background-color: #4b4b4b;
+  padding: 6px 20px;
+  border-radius: 20px;
+  margin: 25px 80px;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .logout:hover {
-    color: rgb(255, 196, 255);
-    box-shadow: 0 0 15px rgb(0, 0, 0);
+  color: #ffc4ff;
+  -webkit-box-shadow: 0 0 15px black;
+          box-shadow: 0 0 15px black;
 }
 
-@media(max-width:1400px) {
-    .news_section {
-        grid-gap: 1vh 1vh;
-    }
-    .news_card {
-        padding: 16px;
-        margin: 0 auto;
-    }
+p {
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-@media(max-width: 1150px) {
-    .news_section {
+.highlight {
+  color: white;
+  background-color: black;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+@media (max-width: 1400px) {
+  .news__section {
+    grid-gap: 1vh 1vh;
+  }
+  .news__card {
+    padding: 16px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1150px) {
+  .news__section {
+    -ms-grid-columns: 2fr;
         grid-template-columns: 2fr;
-    }
+  }
 }
 
-@media(max-width:800px) {
-    p {
-        font-size: 20px !important;
-    }
-    header h2 {
-        font-size: 60px;
-        margin-bottom: 50vh;
-    }
-    header nav ul li a {
-        font-size: 40px;
-    }
-    section {
-        padding: 0;
-    }
-    section>h2 {
-        padding: 2vh
-    }
-    .plane_card {
-        padding: 1vh 5vh;
-    }
+@media (max-width: 800px) {
+  p {
+    font-size: 20px !important;
+  }
+  header .header__title {
+    font-size: 60px;
+    margin-bottom: 50vh;
+  }
+  header .header__menu .header__list .header__item a {
+    font-size: 40px;
+  }
+  section {
+    padding: 0;
+  }
+  section > h2 {
+    padding: 2vh;
+  }
+  .planes__card {
+    padding: 1vh 5vh;
+  }
 }
 
-@media(max-width: 650px) {
-    header h2 {
-        font-size: 50px;
-        margin-bottom: 50vh;
-    }
-    header nav ul li a {
-        font-size: 30px;
-    }
-    p {
-        font-size: 21px !important;
-    }
-    .plane_card h3 {
-        font-size: 30px;
-    }
-    .plane_card {
-        padding: 3vh
-    }
-    .plane_card img {
-        width: 100%;
-    }
-    section>h2 {
-        font-size: 50px;
-    }
-    footer {
-        font-size: 40px;
-    }
-    section .news_card h3 {
-        font-size: 25px !important;
-    }
-    body>h2 {
-        font-size: 30px;
-    }
-    .news_section {
-        padding: 0;
-    }
-    .news_card {
-        width: 90%;
-        margin-bottom: 30px;
-    }
-    .news_card p {
-        font-size: 17px !important;
-    }
-    .news_card img {
-        width: 100%;
-    }
+@media (max-width: 650px) {
+  header h2 {
+    font-size: 50px;
+    margin-bottom: 50vh;
+  }
+  header .header__menu .header__list .header__item a {
+    font-size: 30px;
+  }
+  p {
+    font-size: 21px !important;
+  }
+  .planes__card {
+    padding: 3vh;
+  }
+  .planes__card .planes__title {
+    font-size: 30px;
+  }
+  .planes__card .planes__image {
+    width: 100%;
+  }
+  section > h2 {
+    font-size: 50px;
+  }
+  footer {
+    font-size: 40px;
+  }
+  .news__card .news__title {
+    font-size: 25px !important;
+  }
+  body > h2 {
+    font-size: 30px;
+  }
+  .news__section {
+    padding: 0;
+  }
+  .news__card {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+  .news__card p {
+    font-size: 17px !important;
+  }
+  .news__card img {
+    width: 100%;
+  }
 }
 
-@media(max-width: 500px) {
-    header h2 {
-        font-size: 34px;
-    }
-    header nav ul li a {
-        font-size: 25px;
-    }
+@media (max-width: 500px) {
+  header .header__title {
+    font-size: 34px;
+  }
+  header .header__menu .header__list .header__item a {
+    font-size: 25px;
+  }
 }
+
+@media print {
+  header {
+    height: 30px;
+    display: block;
+    background: none;
+  }
+  header .header__menu {
+    display: none;
+  }
+  header .header__title {
+    font-size: 30px;
+    color: black;
+  }
+  .news__section {
+    display: block;
+  }
+  .news__section .news__card {
+    margin: 0;
+    padding: 0;
+    border-top: 2px solid black;
+  }
+  .news__section .news__card .news__image {
+    width: 170px;
+  }
+  footer {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
