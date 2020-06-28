@@ -37,6 +37,17 @@ header .header__menu {
 
 header .header__menu .header__list {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+header .header__menu .header__list .header__item {
+  margin-left: 10px;
 }
 
 footer .footer__list .footer__link {
@@ -131,7 +142,7 @@ section {
 footer {
   padding: 50px;
   list-style-type: none;
-  background-color: black;
+  background-color: #444444;
   color: white;
 }
 
@@ -221,6 +232,7 @@ input[type=submit], button {
   margin: 25px 0;
   -webkit-transition: .3s;
   transition: .3s;
+  font-size: 40px !important;
 }
 
 .logout:hover {
