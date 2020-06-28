@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
-<body>
+<body class='admin'>
     <?
         session_start();
         if(isset($_SESSION['username'])) {
             $username = $_SESSION['username'];
             
-            echo '<h1>Hello, '.$username.'</h1>';
-            echo '<a class="logout" href="logout.php">Выйти</a>';
+            echo '<h1 class="admin__title">Hello, '.$username.'</h1>';
+            echo '<h2><a class="logout" href="logout.php">Выйти</a></h2>';
             include '../inc/adminka.php';
-            echo '<a class="logout" href="logout.php">Выйти</a>';
+            echo '<h2><a class="logout" href="logout.php">Выйти</a></h2>';
         }
     ?>
 

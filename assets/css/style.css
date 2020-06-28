@@ -214,12 +214,11 @@ input[type=submit], button {
 
 .logout {
   display: inline-block;
-  font-size: 60px;
   color: #ffaeff;
   background-color: #4b4b4b;
   padding: 6px 20px;
   border-radius: 20px;
-  margin: 25px 80px;
+  margin: 25px 0;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -240,6 +239,40 @@ p {
   background-color: black;
   -webkit-transition: .5s;
   transition: .5s;
+}
+
+.admin {
+  padding: 0 40px;
+}
+
+.admin .admin__title {
+  font-size: 40px;
+}
+
+.admin .table__title {
+  font-size: 40px !important;
+}
+
+.admin .table {
+  background-color: #fffae1;
+  border: 2px solid lightgray;
+}
+
+.admin .table .table__row {
+  border-top: 5px solid black !important;
+  font-size: 18px !important;
+}
+
+.admin .form .form__title {
+  font-size: 40px;
+}
+
+.admin .form .form__paragraph {
+  font-size: 32px;
+}
+
+.admin .form .form__containter .form__select .form__option {
+  font-size: 24px !important;
 }
 
 @media (max-width: 1400px) {

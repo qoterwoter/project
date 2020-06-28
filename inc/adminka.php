@@ -1,14 +1,4 @@
 <style>
-    table * {
-        margin:0;
-        font-size: 15px !important;
-    }
-    table th:nth-child(4) {
-        width: 1100px;
-    }
-    table tbody > tr {
-        background-color: wheat;
-    }
 </style>
 
 <?php
@@ -21,9 +11,9 @@
         $result = mysqli_query($link, $sql_news);
         $data = mysqli_fetch_all($result);
 
-        echo '<h4 class="table__title">Данные в таблице <b>planes_news</b></h4>';
-        echo '<table>
-        <tr>
+        echo '<h2 class="table__title">Данные в таблице <b>planes_news</b></h2>';
+        echo '<table class="table">
+        <tr class="table__row">
             <th>Номер</th>
             <th>Заголовок</th>
             <th>Дата</th>
@@ -32,7 +22,7 @@
         ';
 
         for ($i = 0; $i < count($data); $i++) {
-            echo '<tr>';
+            echo '<tr class="table__row">';
             for ($a = 0; $a < count($data[$i]);$a++) {
                 echo '<td>'.$data[$i][$a].'</td>';
             }
@@ -46,9 +36,9 @@
         $result = mysqli_query($link, $sql_news);
         $data = mysqli_fetch_all($result);
 
-        echo '<h4 class="table__title">Данные в таблице <b>planes</b></h4>';
-        echo '<table>
-        <tr>
+        echo '<h2 class="table__title">Данные в таблице <b>planes</b></h2>';
+        echo '<table class="table">
+        <tr class="table__row">
             <th>Номер</th>
             <th>Название самолёта</th>
             <th>Дата создания</th>
@@ -57,7 +47,7 @@
         ';
 
         for ($i = 0; $i < count($data); $i++) {
-            echo '<tr>';
+            echo '<tr class="table__row">';
             for ($a = 0; $a < count($data[$i]);$a++) {
                 echo '<td>'.$data[$i][$a].'</td>';
             }
@@ -71,9 +61,9 @@
         $result = mysqli_query($link, $sql_news);
         $data = mysqli_fetch_all($result);
 
-        echo '<h4 class="table__title">Данные в таблице <b>planes_links</b></h4>';
-        echo '<table>
-        <tr>
+        echo '<h2 class="table__title">Данные в таблице <b>planes_links</b></h2>';
+        echo '<table class="table">
+        <tr class="table__row">
             <th>Номер</th>
             <th style="width:600px">Адрес соц.сети</th>
             <th>Название</th>
@@ -81,7 +71,7 @@
         ';
 
         for ($i = 0; $i < count($data); $i++) {
-            echo '<tr>';
+            echo '<tr class="table__row">';
             for ($a = 0; $a < count($data[$i]);$a++) {
                 echo '<td>'.$data[$i][$a].'</td>';
             }
@@ -95,9 +85,9 @@
         $result = mysqli_query($link, $sql_news);
         $data = mysqli_fetch_all($result);
 
-        echo '<h4 class="table__title">Данные в таблице <b>planes_photos</b></h4>';
-        echo '<table>
-        <tr>
+        echo '<h2 class="table__title">Данные в таблице <b>planes_photos</b></h2>';
+        echo '<table class="table">
+        <tr class="table__row">
             <th>Номер (определяется по номеру поста)</th>
             <th>Ссылка на картинку</th>
             <th>Описание</th>
@@ -105,7 +95,7 @@
         ';
 
         for ($i = 0; $i < count($data); $i++) {
-            echo '<tr>';
+            echo '<tr class="table__row">';
             for ($a = 0; $a < count($data[$i]);$a++) {
                 echo '<td>'.$data[$i][$a].'</td>';
             }
@@ -119,9 +109,9 @@
         $result = mysqli_query($link, $sql_news);
         $data = mysqli_fetch_all($result);
 
-        echo '<h4 class="table__title">Данные в таблице <b>planes_news_photos</b></h4>';
-        echo '<table>
-        <tr>
+        echo '<h2 class="table__title">Данные в таблице <b>planes_news_photos</b></h2>';
+        echo '<table class="table">
+        <tr class = "table__row">
             <th>Номер (определяется по номеру поста)</th>
             <th>Ссылка на картинку</th>
             <th>Описание</th>
@@ -129,7 +119,7 @@
         ';
 
         for ($i = 0; $i < count($data); $i++) {
-            echo '<tr>';
+            echo '<tr class="table__row">';
             for ($a = 0; $a < count($data[$i]);$a++) {
                 echo '<td>'.$data[$i][$a].'</td>';
             }
@@ -169,7 +159,7 @@
         } else {
             $main_sql = 'UPDATE '.$tableName.' SET '.$col1.' = '.$id.', '.$col2.' = "'.$firstCol.'", '.$col3.' = "'.$secondCol.'" WHERE id ='.$id;
         }
-        echo $main_sql;
+        $query2 = mysqli_query($link,$main_sql);
 
     }
     if($_POST['submit2']) {
@@ -216,14 +206,15 @@
     linksOut($connection);
     
 ?>
-<form method='POST' action= ''>
-    <div>
-        <h2>Удалить строку из таблицы:</h2><select name='table1[]'>
-            <option value="planes_news">planes_news</option>
-            <option value="planes_news_photos">planes_news_photos</option>
-            <option value="planes">planes</option>
-            <option value="planes_photos">planes_photos</option>
-            <option value="planes_links">planes_links</option>
+<form method='POST' action= '' class='form'>
+    <h2 class='form__title'>Удалить строку из таблицы:</h2>
+    <div class='form__containter'>
+        <select class='form__select' name='table1[]'>
+            <option class='form__option' value="planes_news">planes_news</option>
+            <option class='form__option' value="planes_news_photos">planes_news_photos</option>
+            <option class='form__option' value="planes">planes</option>
+            <option class='form__option' value="planes_photos">planes_photos</option>
+            <option class='form__option' value="planes_links">planes_links</option>
         </select>
         <input type='number' min='1' placeholder='Введите номер строки' name='linenumber'>
     </div>
@@ -231,61 +222,61 @@
         <input type='submit' name='submit2' value='Удалить'>
     </div>
 </form>
-<form method='POST'>
-        <h2>Добавить строку в таблицу:</h2>
-        <div class='addNewForm'>
-            <select name='table2[]'>
-                <option value="planes_news">planes_news</option>
-                <option value="planes_news_photos">planes_news_photos</option>
-                <option value="planes">planes</option>
-                <option value="planes_photos">planes_photos</option>
-                <option value="planes_links">planes_links</option>
+<form method='POST' class='form'>
+        <h2 class='admin__title'>Добавить строку в таблицу:</h2>
+        <div class='form__containter addNewForm'>
+            <select class='form__select' name='table2[]'>
+                <option class='form__option' value="planes_news">planes_news</option>
+                <option class='form__option' value="planes_news_photos">planes_news_photos</option>
+                <option class='form__option' value="planes">planes</option>
+                <option class='form__option' value="planes_photos">planes_photos</option>
+                <option class='form__option' value="planes_links">planes_links</option>
             </select>
             <label>
-                <p>Номер строки:</p>
+                <p class="form__paragraph">Номер строки:</p>
                 <input type='number' min='1' name='id'>
             </label>
             <label>
-                <p>Данные в колонке 2:</p>
+                <p class="form__paragraph">Данные в колонке 2:</p>
                 <input type='text' name='first_col'>
             </label>
             <label>
-                <p>Данные в колонке 3:</p>            
+                <p class="form__paragraph">Данные в колонке 3:</p>            
                 <input type='text' name='second_col'>
             </label>
             <label>
-                <p>Данные в колонке 4: <span style='font-size:22px ; opacity: 80%;'>(Если её нет, оставьте пустой)</span></p>            
+                <p class="form__paragraph">Данные в колонке 4: <span style='font-size:22px ; opacity: 80%;'>(Если её нет, оставьте пустой)</span></p>            
                 <input type='text' name='third_col'>
             </label>
         </div>
         <input type='submit' name='submit3' value='Добавить'>
 </form>
-<form method='POST'>
-        <h2>Изменить строку в таблице:</h2>
-        <div class='addNewForm'>
-            <select name='table3[]'>
-                <option value="planes_news">planes_news</option>
-                <option value="planes_news_photos">planes_news_photos</option>
-                <option value="planes">planes</option>
-                <option value="planes_photos">planes_photos</option>
-                <option value="planes_links">planes_links</option>
+<form method='POST' class='form'>
+        <h2 class='form__title'>Изменить строку в таблице:</h2>
+        <div class='form__containter addNewForm'>
+            <select class='form__select' name='table3[]'>
+                <option class='form__option' value="planes_news">planes_news</option>
+                <option class='form__option' value="planes_news_photos">planes_news_photos</option>
+                <option class='form__option' value="planes">planes</option>
+                <option class='form__option' value="planes_photos">planes_photos</option>
+                <option class='form__option' value="planes_links">planes_links</option>
             </select>
-        </div>
             <label>
-                <p>Номер строки:</p>
+                <p class="form__paragraph">Номер строки:</p>
                 <input type='number' min='1' name='id2'>
             </label>
             <label>
-                <p>Данные в колонке 2:</p>
+                <p class="form__paragraph">Данные в колонке 2:</p>
                 <input type='text' name='first_col2'>
             </label>
             <label>
-                <p>Данные в колонке 3:</p>            
+                <p class="form__paragraph">Данные в колонке 3:</p>            
                 <input type='text' name='second_col2'>
             </label>
             <label>
-                <p>Данные в колонке 4: <span style='font-size:22px ; opacity: 80%;'>(Если её нет, оставьте пустой)</span></p>            
+                <p class="form__paragraph">Данные в колонке 4: <span style='font-size:22px ; opacity: 80%;'>(Если её нет, оставьте пустой)</span></p>            
                 <input type='text' name='third_col2'>
             </label>
+            </div>
         <input type='submit' name='submit4' value='Изменить'>
 </form>
