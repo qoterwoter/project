@@ -15,7 +15,7 @@
 
         $data = mysqli_fetch_all($result);
 
-        for ($i = 0; $i < count($data);$i++) {
+        for ($i = count($data); $i > 0;$i--) {
             $date = date_create($data[$i][2]);
 
             $date_month = date_format($date, 'm');

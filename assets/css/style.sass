@@ -126,7 +126,7 @@ input
   &[type=text], &[type=number]
     width: 60%
 
-form
+.form
   border-top: 5px solid rgb(94, 236, 255)
   padding-top: 10px
   margin-top: 10px
@@ -139,35 +139,25 @@ form
 input:hover, select:hover
   box-shadow: 0 0 15px rgba(75, 75, 75, 0.486)
 
-input[type=submit]:hover, button:hover
-  box-shadow: 0 0 15px rgb(160, 255, 180)
-
-input[type=submit], button
+input[type=submit], button, .logout
   font-size: 24px
   font-weight: 400
   padding: 5px 15px
   border: 2px solid lightgray
   border-radius: 40px
   background-color: white
+  cursor: pointer
+  transition: .3s
+  &:hover
+    box-shadow: 0 0 15px rgb(161, 161, 161)
+    color: #5cecff
 
+.logout
+  margin: 10px
 .addNewForm
   display: grid
   grid-template-columns: repeat(1, 1fr)
   align-items: center
-
-.logout
-  display: inline-block
-  color: rgb(255, 174, 255)
-  background-color: rgb(75, 75, 75)
-  padding: 6px 20px
-  border-radius: 20px
-  margin: 25px 0
-  transition: .3s
-  font-size: 40px !important
-
-  &:hover
-    color: rgb(255, 196, 255)
-    box-shadow: 0 0 15px rgb(0, 0, 0)
 
 p
   transition: 1s
@@ -219,8 +209,11 @@ p
       font-size: 60px
       margin-bottom: 50vh
 
-    .header__menu .header__list .header__item a
-      font-size: 40px
+    .header__menu
+      .header__list
+        flex-direction: column
+        .header__item a
+          font-size: 40px
 
   section
     padding: 0

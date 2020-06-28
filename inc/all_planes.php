@@ -25,7 +25,7 @@
             $date_full = date_format($date, 'd '.$date_month.' Y');
 
             echo '<article class="planes__card">';
-            echo '<h3 class="planes__title animate__animated animate__fadeInRight">'.$data[$i][0].'. '.$data[$i][1].' - '.$date_full.'</h3>';
+            echo '<h3 class="planes__title animate__animated animate__fadeInLeft">'.$data[$i][0].'. '.$data[$i][1].' - '.$date_full.'</h3>';
             echo '<img class="planes__image animate__animated animate__fadeInUpBig" src="'.$data[$i][5].'" alt="'.$data[$i][6].'" title="'.$data[$i][6].'">';
             echo '<p class="planes__paragraph animate__animated animate__fadeInBottomLeft">'.$data[$i][3].'</p>';
             echo '</article>';

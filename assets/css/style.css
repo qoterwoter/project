@@ -175,13 +175,13 @@ input[type=text], input[type=number] {
   width: 60%;
 }
 
-form {
+.form {
   border-top: 5px solid #5eecff;
   padding-top: 10px;
   margin-top: 10px;
 }
 
-form label {
+.form label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -199,18 +199,26 @@ input:hover, select:hover {
           box-shadow: 0 0 15px rgba(75, 75, 75, 0.486);
 }
 
-input[type=submit]:hover, button:hover {
-  -webkit-box-shadow: 0 0 15px #a0ffb4;
-          box-shadow: 0 0 15px #a0ffb4;
-}
-
-input[type=submit], button {
+input[type=submit], button, .logout {
   font-size: 24px;
   font-weight: 400;
   padding: 5px 15px;
   border: 2px solid lightgray;
   border-radius: 40px;
   background-color: white;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+input[type=submit]:hover, button:hover, .logout:hover {
+  -webkit-box-shadow: 0 0 15px #a1a1a1;
+          box-shadow: 0 0 15px #a1a1a1;
+  color: #5cecff;
+}
+
+.logout {
+  margin: 10px;
 }
 
 .addNewForm {
@@ -221,24 +229,6 @@ input[type=submit], button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.logout {
-  display: inline-block;
-  color: #ffaeff;
-  background-color: #4b4b4b;
-  padding: 6px 20px;
-  border-radius: 20px;
-  margin: 25px 0;
-  -webkit-transition: .3s;
-  transition: .3s;
-  font-size: 40px !important;
-}
-
-.logout:hover {
-  color: #ffc4ff;
-  -webkit-box-shadow: 0 0 15px black;
-          box-shadow: 0 0 15px black;
 }
 
 p {
@@ -311,6 +301,12 @@ p {
   header .header__title {
     font-size: 60px;
     margin-bottom: 50vh;
+  }
+  header .header__menu .header__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   header .header__menu .header__list .header__item a {
     font-size: 40px;

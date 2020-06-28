@@ -1,6 +1,3 @@
-<style>
-</style>
-
 <?php
 
     $connection = mysqli_connect('std-mysql','std_962','12345678','std_962');
