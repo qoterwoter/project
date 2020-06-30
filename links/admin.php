@@ -21,6 +21,9 @@
             include '../inc/adminka.php';
             echo '<h2><a class="logout" href="logout.php">Выйти</a></h2>';
         }
+        if(!isset($_SESSION['username'])) {
+            header('Location: http://project.std-962.ist.mospolytech.ru/links/login.php');
+        }
     ?>
 
 

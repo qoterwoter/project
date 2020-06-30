@@ -8,7 +8,7 @@
         $result = mysqli_query($link, $sql_news);
         $data = mysqli_fetch_all($result);
 
-        echo '<h2 class="table__title">Данные в таблице <b>planes_news</b></h2>';
+        echo '<h2 class="table__title">Данные в таблице <b>planes_news</b>. Всего строк в таблице - '.count($data).'</h2>';
         echo '<table class="table">
         <tr class="table__row">
             <th>Номер</th>
@@ -33,7 +33,7 @@
         $result = mysqli_query($link, $sql_news);
         $data = mysqli_fetch_all($result);
 
-        echo '<h2 class="table__title">Данные в таблице <b>planes</b></h2>';
+        echo '<h2 class="table__title">Данные в таблице <b>planes</b>. Всего строк в таблице - '.count($data).'</h2>';
         echo '<table class="table">
         <tr class="table__row">
             <th>Номер</th>
@@ -58,7 +58,7 @@
         $result = mysqli_query($link, $sql_news);
         $data = mysqli_fetch_all($result);
 
-        echo '<h2 class="table__title">Данные в таблице <b>planes_links</b></h2>';
+        echo '<h2 class="table__title">Данные в таблице <b>planes_links</b>. Всего строк в таблице - '.count($data).'</h2>';
         echo '<table class="table">
         <tr class="table__row">
             <th>Номер</th>
@@ -82,7 +82,7 @@
         $result = mysqli_query($link, $sql_news);
         $data = mysqli_fetch_all($result);
 
-        echo '<h2 class="table__title">Данные в таблице <b>planes_photos</b></h2>';
+        echo '<h2 class="table__title">Данные в таблице <b>planes_photos</b>. Всего строк в таблице - '.count($data).'</h2>';
         echo '<table class="table">
         <tr class="table__row">
             <th>Номер (определяется по номеру поста)</th>
@@ -106,7 +106,7 @@
         $result = mysqli_query($link, $sql_news);
         $data = mysqli_fetch_all($result);
 
-        echo '<h2 class="table__title">Данные в таблице <b>planes_news_photos</b></h2>';
+        echo '<h2 class="table__title">Данные в таблице <b>planes_news_photos</b>. Всего строк в таблице - '.count($data).'</h2>';
         echo '<table class="table">
         <tr class = "table__row">
             <th>Номер (определяется по номеру поста)</th>
@@ -157,6 +157,8 @@
             $main_sql = 'UPDATE '.$tableName.' SET '.$col1.' = '.$id.', '.$col2.' = "'.$firstCol.'", '.$col3.' = "'.$secondCol.'" WHERE id ='.$id;
         }
         $query2 = mysqli_query($link,$main_sql);
+
+        echo '<h2>Удалена строка <b>№'.$id.'</b> из таблицы <b>'.$tableName.'</b></h2>';
 
     }
     if($_POST['submit2']) {
@@ -242,7 +244,7 @@
                 <input type='text' name='second_col'>
             </label>
             <label>
-                <p class="form__paragraph">Данные в колонке 4: <span style='font-size:22px ; opacity: 80%;'>(Если её нет, оставьте пустой)</span></p>            
+                <p class="form__paragraph">Данные в колонке 4: <span>(Если её нет, оставьте пустой)</span></p>            
                 <input type='text' name='third_col'>
             </label>
         </div>
@@ -271,7 +273,7 @@
                 <input type='text' name='second_col2'>
             </label>
             <label>
-                <p class="form__paragraph">Данные в колонке 4: <span style='font-size:22px ; opacity: 80%;'>(Если её нет, оставьте пустой)</span></p>            
+                <p class="form__paragraph">Данные в колонке 4: <span>(Если её нет, оставьте пустой)</span></p>            
                 <input type='text' name='third_col2'>
             </label>
             </div>
